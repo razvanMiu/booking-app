@@ -1,0 +1,376 @@
+// @import '~fullcalendar/dist/fullcalendar.css';
+
+html, body
+{
+    height: 100%;
+}
+
+* 
+{
+    padding: 0;
+    margin: 0;
+}
+
+[v-cloak]
+{
+    display: none;
+}
+
+#root
+{
+    box-sizing: border-box;
+}
+
+// .vue-content {
+//     overflow-y: scroll;
+// }
+
+.v-toolbar[data-booted=true]  {
+    transition: opacity .8s cubic-bezier(.4,0,.2,1) !important;
+}
+
+/* ==========================================================================
+   Authentication styling
+   ========================================================================== */
+#authContainer
+{
+    position: relative;
+    background-image: url("/images/background/auth-bg.jpg");
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.auth-form
+{
+    box-sizing: border-box;
+    max-width: 720px;
+    margin: 0 auto;
+    padding-top: 130px;
+
+    color: #fff;
+}
+
+.auth-header,
+.auth-body,
+.auth-footer
+{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.auth-header
+{
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+.auth-body
+{
+    margin-bottom: 40px;
+}
+
+.auth-footer
+{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.auth-body a
+{
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.auth-footer button
+{
+    border-color: #f0ad4e;
+    outline: none;
+    background: #f0ad4e none repeat scroll 0 0;
+    box-shadow: -2px 5px 10px 0 #ad6d11;
+}
+
+.auth-footer button:hover
+{
+    border-color: #f0ad4e;
+    background: #f0ad4e none repeat scroll 0 0;
+    box-shadow: -2px 5px 40px 0 #ad6d11;
+}
+
+.auth-footer button:active
+{
+    transform: translateY(4px);
+}
+
+.form-group-item
+{
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   Map overview styling
+   ========================================================================== */
+img#overview-image, img.room-image {
+    position: absolute;
+    height: auto;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);
+    display: block;
+    z-index: 1;
+}
+
+img.room-image {
+    z-index: 0;
+}
+
+.overview-floor {
+    margin-right: 150px;
+}
+
+.info-container {
+    padding: 10px 10px;
+    float: left;
+    font-weight: 400;
+    font-size:12px;
+    letter-spacing:1px;
+
+    text-align: justify;
+}
+
+.info-container a {
+    color: none;
+    text-decoration: none;
+} 
+
+.info-container a:hover{
+    color: #4C4C4C;
+}
+
+.highlight {
+    background: #EEEEEE; 
+    text-decoration: none;
+    padding: 5px 5px;
+    border-radius: 6px;
+    font-weight: 700; 
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.orange-1 {
+    color: #C76C0C;
+}
+
+.green-1 {
+    color: #33cc99;
+}
+
+.red-1 {
+    color: #D74E6C;
+}
+
+.logo {
+    display: inherit;
+    margin: 0 auto;
+    margin-top: 80px;
+    height: 150px;
+}
+
+.loading {
+    text-indent: -9999px;
+}
+/* ==========================================================================
+   Calendar styling
+   ========================================================================== */
+.calendar-container 
+{
+    margin: 7px;
+    border-radius: 10px;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+
+/* ==========================================================================
+   Transition
+   ========================================================================== */
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+/* always present */
+.expand-transition {
+  transition: all .3s ease;
+  height: 30px;
+  padding: 10px;
+  background-color: #eee;
+  overflow: hidden;
+}
+/* .expand-enter defines the starting state for entering */
+/* .expand-leave defines the ending state for leaving */
+.expand-enter, .expand-leave {
+  height: 0;
+  padding: 0 10px;
+  opacity: 0;
+}
+
+
+/* ==========================================================================
+   Event Modal
+   ========================================================================== */
+
+.event-modal-card {
+    background: #255E69;
+    color: #FFFFFF;
+    padding: 16px 5px 22px 50px;
+}
+
+.card-menu {
+    width: 100%;
+    display: inherit;
+    justify-content: flex-end;
+}
+
+.card-body {   
+    margin-bottom: 40px;
+}
+
+.card-body .description {
+    margin-bottom: 40px; 
+    display: block;
+}
+
+.card-edit {
+    margin-bottom: 20px;
+}
+
+.card-footer-item {
+    margin-bottom: 15px;
+}
+
+.card-footer .v-icon {
+    margin-right: 30px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.quote {
+    font-size: 2em;
+    line-height: 0;
+}
+
+.overflow-hidden {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 250px;
+}
+
+.v-toolbar {
+    z-index: 100;
+}
+
+.calendar-container {
+    // margin-left: 40%;
+}
+
+#calendar {
+    background: #ffffff !important;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    margin: 0 15%;
+    min-height: calc(100vh - 80px);
+    height: 100% !important;
+    overflow: auto !important;
+}
+
+.blur img {
+    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+    filter: blur(2px);
+}
+
+.home-button {
+    margin-left: 26px;
+}
+
+.back-button {
+    height: 56px;
+    width:56px;
+    background-color: #009688;
+    color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: -28px;
+    position: fixed;
+}
+
+.right-arrow {
+    font-size: 1.5em;
+    position: relative;
+    left: 7px;
+}
+
+.repeat-day {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #009688;
+    color: #009688;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.repeat-header {
+    display: block;
+    color: #808080;
+    margin-bottom: 8px;
+}
+
+
+
+
+.v-dialog::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.v-dialog::-webkit-scrollbar
+{
+    width: 8px;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.v-dialog::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #E5E5E5;
+    cursor: pointer;
+}
+
+label 
+{
+    margin-bottom: 0 !important;
+}
+
+#editBookingModal {
+    background-color: #009688;
+    color: #FFFFFF;
+    padding: 35px 50px;
+}

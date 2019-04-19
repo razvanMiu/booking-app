@@ -1,0 +1,100 @@
+/* ==========================================================================
+   NavBar Style
+   ========================================================================== */
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+[v-cloak] {
+  display: none;
+}
+
+.card{
+  width: 250px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.title {
+  margin: 0 auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.floorName {
+  font-weight: 100;
+}
+/*
+Dialog
+ */
+
+.v-text-field__slot {
+	height: auto;
+}
+
+.v-menu__activator {
+	height: auto;
+}
+
+
+/*
+Building list
+ */
+.v-list__tile.v-list__tile--link {
+  text-decoration: none;
+}
+
+/*
+
+ */
+.cardComponent {
+	margin: 45px 45px;
+}
+
+h1 {
+	font-size: 28px;
+}
+
+.buttons {
+  text-align: right;
+}
+
+.welcome {
+    margin: 0;
+    text-align: center;
+    position: relative;
+    top: 18em;
+}
+
+/*
+Card actions
+ */
+
+.v-card__actions {
+  margin: 0 auto;
+  width: 36%;
+}
+
+.v-card__title {
+  text-align: center;
+}
+
+.eventTitle {
+  background: #616161;
+  color: white;
+  padding: 31px;
+}
+
+p {
+  margin: 0;
+}
+
+.headline {
+  width: 100%;
+}
